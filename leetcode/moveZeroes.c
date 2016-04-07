@@ -18,19 +18,19 @@
 */
 
 void moveZeroes(int* nums, int numsSize) {
-	if (numsSize < 1) return;
-	int i = 0;
-	int j = 0;
-	int nonzcount = 0;
-	while (j < numsSize) {
-		if (nums[j] != 0) {
-			nums[i] = nums[j];
-			++i, ++nonzcount;
-		}
-		++j;
-	}
-	while (nonzcount < numsSize) {
-		nums[nonzcount] = 0;
-		++nonzcount;
-	}
+    if (numsSize < 1) return;
+    int i = 0;
+    int j = 0;
+    int nonzcount = 0;
+    while (j < numsSize) {
+        if (nums[j] != 0) {
+            nums[i] = nums[j];
+            ++i, ++nonzcount;
+        }
+        ++j;
+    }
+    while (nonzcount < numsSize) {
+        nums[nonzcount] = 0;
+        ++nonzcount;
+    }
 }
