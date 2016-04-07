@@ -18,13 +18,13 @@
 */
 
 uint32_t reverseBits(uint32_t n) {
-	uint32_t m = 0;
-	int shrcount = 0;
-	while (n > 0) {
-		uint32_t bit = n & 1;
-		m = (bit << (31 - shrcount)) | m;
-		n >>= 1; // logical shift
-		++shrcount;
-	}
-	return m;
+    uint32_t m = 0;
+    int shrcount = 0;
+    while (n > 0) {
+        uint32_t bit = n & 1;
+        m = (bit << (31 - shrcount)) | m;
+        n >>= 1; // logical shift
+        ++shrcount;
+    }
+    return m;
 }
