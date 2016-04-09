@@ -7,7 +7,8 @@ struct bucket {
     struct bucket* next;
 };
 
-int containsNearbyDuplicate(int* nums, int numsSize, int k) {
+int containsNearbyDuplicate(int* nums, int numsSize, int k) 
+{
     struct bucket** htable = (struct bucket**)calloc(numsSize, sizeof(struct bucket*));
     if (!htable) return 0;
 
@@ -17,7 +18,8 @@ int containsNearbyDuplicate(int* nums, int numsSize, int k) {
     int count = 0;    
     int num = 0;
     struct bucket* pbucket = NULL;
-    for (int i = 0; i < numsSize; ++i) {
+    for (int i = 0; i < numsSize; ++i) 
+    {
         num = nums[i];
         pbucket = htable[abs(num) % numsSize];
         if (!pbucket) {
@@ -28,8 +30,7 @@ int containsNearbyDuplicate(int* nums, int numsSize, int k) {
             pbucket->value = num;
             pbucket->index = i;
             ++count;
-        }
-        else {
+        } else {
             // collision occured here
             // our value could still be sitting in the chain
             // so check for that as we go
