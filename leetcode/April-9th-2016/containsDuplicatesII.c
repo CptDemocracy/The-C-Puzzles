@@ -22,6 +22,7 @@ int containsNearbyDuplicate(int* nums, int numsSize, int k)
     {
         num = nums[i];
         pbucket = htable[abs(num) % numsSize];
+        
         if (!pbucket) {
             // allocate a bucket
             // oh wait... we've already done that!
