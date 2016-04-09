@@ -20,6 +20,8 @@ struct bucket {
     its runtime beat 97.10% of other submissions, it has a huge flaw,
     it has a space complexity of O(n^2) in order to avoid rehashing of 
     the hash table which is used for storing duplicates. */
+    
+  
 int containsNearbyDuplicate(int* nums, int numsSize, int k) 
 {
     struct bucket** htable = (struct bucket**)calloc(numsSize, sizeof(struct bucket*));
