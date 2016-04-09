@@ -20,8 +20,8 @@ static int ROMAN_TABLE[UCHAR_MAX];
          ROMAN_TABLE['C'] = 100; ROMAN_TABLE['D'] = 500; \
          ROMAN_TABLE['M'] = 1000; } while (0)
 
-int romanToInt(const char* s) 
-{
+int romanToInt(const char* s) {
+  
     INIT_ROMAN_TABLE();
         
     if (!s) return 0;
