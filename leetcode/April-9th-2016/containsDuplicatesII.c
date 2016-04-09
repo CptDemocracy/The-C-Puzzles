@@ -1,3 +1,12 @@
+/*
+[ref.href] leetcode.com/problems/contains-duplicate-ii
+"
+  Given an array of integers and an integer k, find out whether 
+  there are two distinct indices i and j in the array such that 
+  nums[i] = nums[j] and the difference between i and j is at most k.
+"
+*/
+
 #include <string.h>
 #include <math.h>
 
@@ -7,6 +16,10 @@ struct bucket {
     struct bucket* next;
 };
 
+/*  Even though at the time I submitted this solution at leetcode.com, 
+    its runtime beat 97.10% of other submissions, it has a huge flaw,
+    it has a space complexity of O(n^2) in order to avoid rehashing of 
+    the hash table which is used for storing duplicates. */
 int containsNearbyDuplicate(int* nums, int numsSize, int k) 
 {
     struct bucket** htable = (struct bucket**)calloc(numsSize, sizeof(struct bucket*));
