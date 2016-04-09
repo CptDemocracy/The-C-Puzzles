@@ -28,7 +28,10 @@ int containsNearbyDuplicate(int* nums, int numsSize, int k)
     if (!htable) return 0;
 
     struct bucket* buckets = (struct bucket*)calloc(numsSize * numsSize, sizeof(struct bucket));
-    if (!buckets) return 0;
+    if (!buckets) {
+      free(htable);
+      return 0;
+    }
     
     int count = 0;    
     int num = 0;
