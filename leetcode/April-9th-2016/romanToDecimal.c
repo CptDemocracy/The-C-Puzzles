@@ -47,6 +47,7 @@ int romanToInt(const char* s)
             next = ROMAN_TABLE[toupper(s[i + 1])];
         }
         value += currval;
+        
         if (currval < next) {
             j = i + 1;
             while (j > 0 
