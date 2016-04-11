@@ -28,11 +28,17 @@ void kmpInitDFA(int* dfa, const char* pat, int psize) {
 int strStr(const char* haystack, const char* needle) {
     size_t hsize = strlen(haystack);
     size_t psize = strlen(needle);
-    if (psize < 1) return 0;
+    if (psize < 1) {
+      return 0;
+    }
     int index = -1;
+    
     int* dfa = (int*)calloc(psize, sizeof(int));
-    if (!dfa) return index;
+    if (!dfa) {
+      return index;
+    }
     kmpInitDFA(dfa, needle, psize);
+    
     int k = -1;
     for (int i = 0; i < hsize; ++i) {
         while (k > -1 && needle[k + 1] != haystack[i]) {
