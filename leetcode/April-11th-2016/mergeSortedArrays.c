@@ -12,8 +12,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-void merge(int* nums1, int m, int* nums2, int n) {
-    
+void merge(int* nums1, int m, int* nums2, int n) 
+{
     int total = m + n;
     int* buffer = (int*)calloc(total, sizeof(int));
     if (!buffer) return;
