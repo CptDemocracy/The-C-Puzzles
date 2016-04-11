@@ -21,6 +21,12 @@
 
 #include <limits.h>
 
+/*
+  PLEASE NOTICE.
+  For the love of ALGOL, don't write production code like the one you see below.
+  Honestly, I had my "1337 hax0r skillz"-hat one when I was writing this code.
+*/
+
 int isIsomorphic(char* s, char* t) {
     int keys[CHAR_MAX] = { 0 };
     int vals[CHAR_MAX] = { 0 };
