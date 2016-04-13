@@ -43,12 +43,14 @@
 #define HOURGLASS_WIDTH     3
 
 int main(){
+	// BEGIN problem-supplied code 
     int arr[ROWS][COLS] = { 0 };
     for(int arr_i = 0; arr_i < ROWS; arr_i++){
        for(int arr_j = 0; arr_j < COLS; arr_j++){
           scanf("%d",&arr[arr_i][arr_j]);
        }
     }    
+    // END problem-supplied code
     int maxsum = INT_MIN;
     int sum = 0;
     for (int i = 0; i <= ROWS - HOURGLASS_WIDTH; ++i) {        
