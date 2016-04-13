@@ -43,7 +43,7 @@
 #define HOURGLASS_WIDTH     3
 
 int main(){
-	// BEGIN problem-supplied code 
+    // BEGIN problem-supplied code 
     int arr[ROWS][COLS] = { 0 };
     for(int arr_i = 0; arr_i < ROWS; arr_i++){
        for(int arr_j = 0; arr_j < COLS; arr_j++){
