@@ -55,7 +55,7 @@ int main(){
     int sum = 0;
     for (int i = 0; i <= ROWS - HOURGLASS_WIDTH; ++i) {        
         for (int j = 0; j <= COLS - HOURGLASS_HEIGHT; ++j) {
-			sum = 0;
+            sum = 0;
             int k = 0;
             for (k = 0; k < HOURGLASS_WIDTH; ++k) {
                 sum += arr[i][j + k];
