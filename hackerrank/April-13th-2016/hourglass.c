@@ -63,10 +63,10 @@ int main(){
             for (k = 0; k < HOURGLASS_WIDTH; ++k) {
                 sum += arr[i + HOURGLASS_HEIGHT - 1][j + k];
             }
-			for (k = 1; k < HOURGLASS_HEIGHT - 1; ++k) {
-				sum += arr[k + i][j + HOURGLASS_WIDTH / 2];
-			}
-			if (sum > maxsum) maxsum = sum;
+            for (k = 1; k < HOURGLASS_HEIGHT - 1; ++k) {
+            	sum += arr[k + i][j + HOURGLASS_WIDTH / 2];
+            }
+            if (sum > maxsum) maxsum = sum;
         }        
     }
     printf("%d\n", maxsum);
