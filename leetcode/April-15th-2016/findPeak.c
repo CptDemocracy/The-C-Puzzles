@@ -29,7 +29,7 @@ int findPeakElement(int* nums, int numsSize) {
             max = nums[i];
         }
         else if (nums[i] < max) {
-			break;
+	    break;
         }
         ++i;
     }
