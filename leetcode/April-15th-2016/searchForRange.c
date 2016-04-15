@@ -15,10 +15,6 @@
 
 #include <stdlib.h>
 
-/**
- * Return an array of size *returnSize.
- * Note: The returned array must be malloced, assume caller calls free().
- */
  int cmpInts(const int* ptra, const int* ptrb) {
      if (!ptra && !ptrb) return 0;
      else if (!ptra) return -1;
@@ -30,6 +26,10 @@
      return 0;
  }
  
+/**
+ * Return an array of size *returnSize.
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
 int* searchRange(int* nums, int numsSize, int target, int* returnSize) {
     *returnSize = 0;
     int* pair = (int*)calloc(2, sizeof(int));
