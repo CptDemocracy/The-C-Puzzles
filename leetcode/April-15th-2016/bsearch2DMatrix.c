@@ -35,7 +35,7 @@ bool searchMatrix(int** matrix, int matrixRowSize, int matrixColSize, int target
     const int* ptarget = NULL;
     for (int i = 0; i < matrixRowSize; ++i) {
         ptarget = bsearch(&target, matrix[i], matrixColSize, sizeof(int), cmpInts);
-        if (ptarget) return 1;
+        if (ptarget) return true;
     }
-    return 0;
+    return false;
 }
