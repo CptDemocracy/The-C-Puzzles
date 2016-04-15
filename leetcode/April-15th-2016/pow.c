@@ -14,8 +14,8 @@ double myPow(double x, int n) {
     }
     if (n == -n) {
         // guard against power==INT_MIN shenanigans
-        x = abs(x);
-        if (abs(x - 1) <= EPSILON) {
+        x = fabs(x);
+        if (fabs(x - 1) <= EPSILON) {
             return x;
         }
         return 0.0;
