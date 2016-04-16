@@ -10,16 +10,16 @@
 */
 
 int findMin(int* nums, int numsSize) {
-	if (!nums) return 0;
-	int lo = 0;
-	int hi = numsSize - 1;
-	while (lo < hi) {
-		int mp = (lo + hi) / 2;
-		if (nums[hi] < nums[mp]) {
-			lo = mp + 1;
-		} else {
-			hi = mp;
-		}
-	}
-	return nums[lo];
+    if (!nums) return 0;
+    int lo = 0;
+    int hi = numsSize - 1;
+    while (lo < hi) {
+        int mp = (lo + hi) / 2;
+        if (nums[hi] < nums[mp]) {
+            lo = mp + 1;
+        } else {
+            hi = mp;
+        }
+    }
+    return nums[lo];
 }
