@@ -8,7 +8,7 @@
 "
 
 SPECIAL THANKS to wiki.ruihan.org/index.php/Search_in_Rotated_Sorted_Array for
-clearing the picture up for me.
+clearing up the picture for me.
 */
 
 int search(int* nums, int numsSize, int target) {
