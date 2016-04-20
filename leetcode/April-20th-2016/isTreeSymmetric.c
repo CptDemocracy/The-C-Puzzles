@@ -28,7 +28,7 @@
  *     struct TreeNode *right;
  * };
  */
- bool areSymmetric(struct TreeNode* left, struct TreeNode* right) {
+ int areSymmetric(struct TreeNode* left, struct TreeNode* right) {
      if (!left && !right) return 1;
      if (!left || !right) return 0;
      if ((left->left && right->right && left->left->val != right->right->val)
@@ -39,7 +39,7 @@
      return areSymmetric(left->left, right->right) && areSymmetric(left->right, right->left);
  }
  
-bool isSymmetric(struct TreeNode* root) {
+int isSymmetric(struct TreeNode* root) {
     if (!root) return 1;
     if (!root->left && !root->right) return 1;
     if (!root->left || !root->right) return 0;
