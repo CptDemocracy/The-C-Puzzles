@@ -28,6 +28,11 @@
  *     struct TreeNode *right;
  * };
  */
+ 
+ int isSymmetric(struct TreeNode* root);
+ 
+ int areSymmetric(struct TreeNode* left, struct TreeNode* right);
+ 
  int areSymmetric(struct TreeNode* left, struct TreeNode* right) {
      if (!left && !right) return 1;
      if (!left || !right) return 0;
