@@ -39,8 +39,8 @@ bool isValidBSTHelper(struct TreeNode* root, long long min, long long max) {
 bool isValidBST(struct TreeNode* root) {
     if (!root) return true;
     
-    long long min = (long long)INT_MIN - 1LL;
-    long long max = (long long)INT_MAX + 1LL;
+    long long min = LLONG_MIN;
+    long long max = LLONG_MAX;
     
     return isValidBSTHelper(root, min, max);
 }
